@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "YOU CAN DO IT!!!!!!\n"
+echo "YOU CAN DO IT!!!!!!"
 
 read comm
 
