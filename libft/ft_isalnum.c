@@ -6,11 +6,11 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 19:14:12 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/09/21 12:48:22 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:48:54 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int isalnum(int c)
+int	isalnum(int c)
 {
 	return ((c >= '0' <= '9'));
 }
