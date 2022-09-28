@@ -6,17 +6,18 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 19:34:01 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/09/24 18:37:31 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/09/28 03:17:54 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 // copy byt
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char	*ptrdst;
 	char	*ptrsrc;
-	int		i;
+	size_t	i;
 
 	ptrsrc = (char *) src;
 	ptrdst = (char *) dst;

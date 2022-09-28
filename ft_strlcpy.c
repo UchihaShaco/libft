@@ -6,9 +6,11 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 11:35:27 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/09/24 18:40:23 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/09/28 03:13:24 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*strlcpy(char *dst, const char *src, size_t dstsize)
 {

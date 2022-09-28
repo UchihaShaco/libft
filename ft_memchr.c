@@ -6,13 +6,14 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 04:22:43 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/09/24 18:35:43 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/09/28 03:12:53 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *b, int c, size_t n)
 {

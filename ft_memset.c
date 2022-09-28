@@ -6,12 +6,13 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:37:27 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/09/21 20:13:23 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/09/28 03:13:09 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

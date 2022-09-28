@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jalwahei <ja3far54@hotmail.com>            +#+  +:+       +#+        */
+/*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:26:54 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/09/19 10:27:05 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/09/28 03:15:57 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	l;
+#include "libft.h"
 
-	l = 0;
-	while (*(str++) != '\0')
-	{
-		l++;
-	}
-	return (l);
+size_t	ft_strlen(const char *s)
+{
+	int		i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return ((size_t)i);
 }

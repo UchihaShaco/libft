@@ -6,9 +6,11 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 16:32:26 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/09/24 18:37:51 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/09/28 04:29:11 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
