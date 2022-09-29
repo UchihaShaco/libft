@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 04:22:43 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/09/28 03:12:53 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/09/28 13:42:39 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,9 @@ void	*ft_memchr(const void *b, int c, size_t n)
 			s++;
 	i++;
 	}
+	return (0);
 }
+
 // Looks for Chr and it finds and returns everything  afer the with the chr
 // void *ft_memchr(const void *b, int ch, size_t count);
 // int	ft_strlen(char *str)

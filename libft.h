@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 19:12:09 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/09/28 04:32:11 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/09/28 13:34:32 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 char			*ft_strdup(const char *s1);
 char			*ft_strndup(const char *s1, size_t n);
-void			*ft_calloc(size_t count, size_t size);
+// void			*ft_calloc(size_t count, size_t size);
 
 size_t			ft_strlen(const char *s);
 size_t			ft_strlen_2(char **s);

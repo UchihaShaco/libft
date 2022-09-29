@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 07:20:53 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/09/27 23:55:39 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/09/28 13:33:04 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 len = 0;
 slen = ft_strlen(src);
-	while (*dst && size > 0)
+	while (*dst && dstsize > 0)
 	{
 	dst++;
 	len++;
-	size--;
+	dstsize--;
 	}
-	while (*src && size-- > 1)
+	while (*src && dstsize-- > 1)
 	*dst++ = *src++;
-	if (size == 1 || *src == 0)
+	if (dstsize == 1 || *src == 0)
 	*dst = '\0';
 	return (slen + len);
 }
