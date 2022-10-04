@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 04:22:43 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/09/28 13:42:39 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/01 19:42:44 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,31 @@
 #include <string.h>
 #include <stdlib.h>
 #include "libft.h"
-
+// It will look for a character inside the string and returns
+// character from that position of the character
 void	*ft_memchr(const void *b, int c, size_t n)
 {
-	size_t	i;
-	char	*s;
+	size_t			i;
+	unsigned char	*s;
+	unsigned char	ch;
 
-	s = (char *)b;
+	ch = c;
+	s = (unsigned char *)b;
 	i = 0;
 	while (i < n)
 	{
-		if (*s == c)
+		if (*s == ch)
 		{
-			return (s);
+			return ((char *)s);
 		}
 		else
 			s++;
 	i++;
 	}
-	return (0);
+	return (NULL);
 }
 
 // Looks for Chr and it finds and returns everything  afer the with the chr
-// void *ft_memchr(const void *b, int ch, size_t count);
 // int	ft_strlen(char *str)
 // {
 // 	int	l;

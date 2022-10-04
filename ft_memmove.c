@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 16:32:26 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/09/29 16:34:22 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/09/30 17:05:00 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,70 +17,55 @@
 
 // void	*ft_memmove(void *dst, const void *src, size_t n)
 // {
-// 	char	*ptrdst;
-// 	char	*ptrsrc;
-// 	size_t	i;
+//     char *pDest = (char *)dst;
+//     const char *pSrc =(const char*)src;
+// 	char *tmp;
+// 	tmp  = (char *)malloc(sizeof(char ) * n);
 
-// 	ptrsrc = (char *) src;
-// 	ptrdst = (char *) dst;
-// 	i = 0;
-// 	if (dst == NULL)
-// 		return (NULL);
-// 	else if (ptrdst < ptrsrc)
-// 	{
-// 		while (i < n)
-// 		{
-// 		ptrdst[i] = ptrsrc[i];
-// 		i++;
-// 		}
-// 	}
-// 		else
-// 		{
-// 			i = ft_strlen(ptrdst);
-// 		while (i < n)
-// 			{
-// 		ptrdst[i] = ptrsrc[i];
-// 		i--;
-// 			}
-// 		}
-// 	return (dst);
+//     if(NULL == tmp)
+//     {
+//         return (NULL);
+//     }
+//     else
+//     {
+//         size_t i = 0;
+//         while (i < n )
+//         {
+//             *(tmp + i) = *(pSrc + i);
+// 			i++;
+//         }
+// 		i=0;
+//         while ( i < n)
+//         {
+//             *(pDest + i) = *(tmp + i);
+// 			i++;
+//         }
+//         free(tmp); 
+//     }
+//     return (dst);
 // }
-// int main()
-// {
-// 	char sc[] = "aabcd";
-// 	char dt[] = "lool";
-// 	printf( "%s", ft_memmove(sc,dt,4));
-// 	// printf( "%s ", memmove(sc,dt,5));
-// }
-void	*ft_memmove(void *dst, const void *src, size_t n)
+
+/*
+** Copies len bytes from string src to string dst.
+** The two strings may overlap;
+** The copy is always done in a non-destructive manner.
+** Returns the original value of dst.
+*/
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    char *pDest = (char *)dst;
-    const char *pSrc =(const char*)src;
-	char *tmp;
-	tmp  = (char *)malloc(sizeof(char ) * n);
-
-    if(NULL == tmp)
-    {
-        return (NULL);
-    }
-    else
-    {
-        size_t i = 0;
-        while (i < n )
-        {
-            *(tmp + i) = *(pSrc + i);
-			i++;
-        }
-		i=0;
-        while ( i < n)
-        {
-            *(pDest + i) = *(tmp + i);
-			i++;
-        }
-        free(tmp); 
-    }
-    return (dst);
+	if (!dst && !src)
+		return (NULL);
+	if (dst < src)
+		ft_memcpy(dst, src, len);
+	else
+	{
+		while (len--)
+			((char *)dst)[len] = ((char *)src)[len];
+	}
+	return (dst);
 }
+
 // copy src to tmp array
 //copy tmp to dest
 //free allocated memory

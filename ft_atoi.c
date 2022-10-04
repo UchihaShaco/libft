@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 11:22:45 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/09/29 17:29:10 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/01 19:33:12 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,6 @@ int	ft_atoi(const char *str)
 // { 
 // 	(void)argc;
 //     printf("OUR atoi     %d \n", ft_atoi(argv[1]));
-//     printf("THEIR atoi   %d \n", atoi(argv[1]));
+//     printf("THEIR atoi   %d \n",   atoi(argv[1]));
 //     return 0;
 // }

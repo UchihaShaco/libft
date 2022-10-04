@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 19:12:09 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/09/28 13:34:32 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/04 20:40:18 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <limits.h>
 # include <string.h>
+# include <stdlib.h>
 
 int				ft_isascii(int c);
 int				ft_isprint(int c);
@@ -44,11 +45,11 @@ void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 char			*ft_strdup(const char *s1);
 char			*ft_strndup(const char *s1, size_t n);
-// void			*ft_calloc(size_t count, size_t size);
+void			*ft_calloc(size_t count, size_t size);
 
 size_t			ft_strlen(const char *s);
 size_t			ft_strlen_2(char **s);
-char			*ft_strchr(const char *s, int c);
+char			*ft_strchr(const char *str, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strstr(const char *haystack, const char *needle);
 char			*ft_strnstr(const char *haystack, const char *needle,
@@ -62,8 +63,8 @@ size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char			*ft_strcat(char *s1, const char *s2);
 char			*ft_strncat(char *s1, const char *s2, size_t n);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
-
-// char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_strdup(const char *str);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
 // char			*ft_strjoin(char const *s1, char const *s2);
 // char			*ft_strtrim(char const *s1, char const *set);
 // char			**ft_split(char const *s, char c);

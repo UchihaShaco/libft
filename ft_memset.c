@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:37:27 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/09/28 03:13:09 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/09/30 16:35:33 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,14 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	char	*altb;
+	unsigned char	*altb;
 
-	altb = (char *)b;
-	if (b == NULL)
-		return (NULL);
-	while (*altb && len > 0 && len--)
+	size_t i = 0;
+	altb = (unsigned char *)b;
+	while (len > i)
 	{
-			*altb = c;
-			altb++;
+			altb[i] = c;
+			i++;
 	}
 	return (b);
 }
@@ -33,7 +32,7 @@ void	*ft_memset(void *b, int c, size_t len)
 // {
 //     char *str;
 //     str = strdup("hello");
-//     if (ft_memset((void *)str, 'a', 5))
+//     if (memset((void *)str, 'A', 5))
 //     {
 //         printf("%s\n", str);
 //     }
