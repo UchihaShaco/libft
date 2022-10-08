@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 13:36:02 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/04 21:45:06 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/07 23:20:48 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	strin_len = ft_strlen(s);
 	if (start > strin_len)
 		return (ft_strdup(""));
-	// Checks if its trying to create a substring bigger than `s`
 	if (start + len > strin_len)
 		len = strin_len - start;
 	size = len + 1;

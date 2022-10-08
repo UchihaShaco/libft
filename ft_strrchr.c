@@ -6,14 +6,14 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 07:04:57 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/03 18:58:56 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/06 19:51:54 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /*
-Looks for a specific character but the last 
-makcharacter inside that string and returns that character/string
+ The strrchr() function is identical to strchr(),
+	except it locates the last occurrence of c.
 */
 
 char	*ft_strrchr(const char *s, int c)

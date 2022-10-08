@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 20:39:13 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/05 16:26:01 by jalwahei         ###   ########.fr       */
+/*   Created: 2022/10/05 19:50:26 by jalwahei          #+#    #+#             */
+/*   Updated: 2022/10/05 19:53:57 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-char	*ft_strdup(const char *str)
+void	ft_putendl_fd(char *s, int fd)
 {
-	return (ft_substr(str, 0, ft_strlen(str)));
+	if (str != NULL)
+	{
+		ft_putstr_fd(s, fd);
+		ft_putchar_fd('\n', fd);
+	}
 }

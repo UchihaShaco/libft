@@ -6,13 +6,13 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 11:35:27 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/01 19:13:11 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/04 22:12:00 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// Basically copies the source string to destinati
-// on string but with a limitation of "how much to copy"
+// Basically copies the source string to destination
+//  string but with a limitation of "how much to copy"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

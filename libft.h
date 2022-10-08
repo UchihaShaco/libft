@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 19:12:09 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/04 20:40:18 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/07 18:30:41 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,9 @@ char			*ft_strncat(char *s1, const char *s2, size_t n);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 char			*ft_strdup(const char *str);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
-// char			*ft_strjoin(char const *s1, char const *s2);
-// char			*ft_strtrim(char const *s1, char const *set);
-// char			**ft_split(char const *s, char c);
+char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strtrim(char const *str1, char const *str2);
+char			**ft_split(char const *s, char c);
 // char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 // void			ft_putchar(char c);

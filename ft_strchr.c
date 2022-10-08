@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 19:31:04 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/01 19:31:12 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/06 19:49:38 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,9 @@ DESCRIPTION
 		(converted to a char) in
      the string pointed to by s.  
 		The terminating null character is considered to be
-     part of the string; therefore if c is `\0',the functions 
-		locate the terminating \0'.
-     The strrchr() function is identical to strchr(),
-	except it locates the last occur-
-     rence of c.
-RETURN VALUES
+     part of the string; therefore if c is `\0',
+	 the functions locate the terminating \0'.
+RETURN VALUE
      The functions strchr() and strrchr() return a 
 		pointer to the located character,
 	or
@@ -39,7 +36,7 @@ char	*ft_strchr(const char *str, int c)
 		str++;
 	if (ch == (unsigned char)*str)
 		return ((char *)str);
-		return (NULL);
+	return (NULL);
 }
 
 // int main()

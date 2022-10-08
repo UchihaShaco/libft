@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 23:33:19 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/04 20:29:48 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/05 15:41:50 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,16 @@ RETURN VALUES
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
-	size_t	needle_len;
+	int	needle_len;
 
 	needle_len = ft_strlen(needle);
-	 	i = 0;
-	// if ((len == 0 && needle[i] && haystack[i]) || (ft_strlen(haystack) == 0
-	// 		&& len == 0))
-	// return (NULL);
-	if (needle_len == 0 || (ft_strlen(haystack) == 0 && !len))
+	i = 0;
+	if (needle[0] == '\0')
+		return ((char *)haystack);
+	if (((needle_len == 0 && needle[i] && haystack[i]) 
+	|| ft_strlen(haystack) == 0 || len == 0))
+		return (NULL);
+	if (needle_len == 0 || (ft_strlen(haystack) == 0 && len == 0))
 		return ((char *)haystack);
 	while (i <= (len - needle_len))
 	{
@@ -51,9 +53,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // int main()
 // {
 //     char *ptr;
-// 	char haystack[30] = "";
-//         char needle[10] = "123456";
-//     ptr = ft_strnstr(haystack, needle, -1);
+// 	char haystack[30] = "gfh";
+//         char needle[10] = "sdf";
+//     ptr = ft_strnstr(haystack, needle, 0);
 // 	printf("Returning the string: %s \n", ptr);
 // 	printf("Returning the string: %s \n", strnstr(haystack, needle, -1));
 //     return (0);

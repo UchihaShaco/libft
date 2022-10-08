@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 07:01:26 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/03 20:51:22 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/07 23:18:19 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char	*ft_itoa(int n)
 		c[0] = '-';
 	return (c);
 }
-int main() {
-    printf("String : %s", ft_itoa(-34123));
-    return 0;
-}
+// int main() {
+//     printf("String : %s", ft_itoa(-34123));
+//     return 0;
+// }
