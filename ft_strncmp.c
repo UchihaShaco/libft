@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 14:31:54 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/03 19:07:19 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/13 19:44:06 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,18 @@ RETURN VALUES
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*ps1;
+	unsigned char	*ps2;
 
+	ps1 = (unsigned char *)s1;
+	ps2 = (unsigned char *)s2;
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (s1[i] && s1[i] == s2[i] && (i < n - 1))
+	while (ps1[i] && ps1[i] == ps2[i] && (i < n - 1))
 		i++;
-	return (s1[i] - s2[i]);
+	return (ps1[i] - ps2[i]);
 }
 // int main()
 //  {	

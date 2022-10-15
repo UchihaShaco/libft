@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:37:27 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/09/30 16:35:33 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/10 15:27:37 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
+	size_t			i;
 	unsigned char	*altb;
 
-	size_t i = 0;
+	i = 0;
 	altb = (unsigned char *)b;
 	while (len > i)
 	{

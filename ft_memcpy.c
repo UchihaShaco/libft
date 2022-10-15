@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 19:34:01 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/01 19:12:17 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/13 14:22:29 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	ptrsrc = (char *) src;
 	ptrdst = (char *) dst;
 	i = 0;
-	if (dst == NULL)
+	if (dst == NULL && src == NULL )
 		return (NULL);
 	while (i < n)
 	{

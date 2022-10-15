@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 19:50:26 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/09 21:27:47 by jalwahei         ###   ########.fr       */
+/*   Created: 2022/10/09 21:14:43 by jalwahei          #+#    #+#             */
+/*   Updated: 2022/10/10 17:24:23 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
+/*
+applies the void function on the string 
+*/
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	if (s != NULL)
+	unsigned int	i;
+
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i])
 	{
-		ft_putstr_fd(s, fd);
-		ft_putchar_fd('\n', fd);
+		f(i, s + i);
+		i++;
 	}
 }

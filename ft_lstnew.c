@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 19:50:26 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/09 21:27:47 by jalwahei         ###   ########.fr       */
+/*   Created: 2022/10/15 15:37:39 by jalwahei          #+#    #+#             */
+/*   Updated: 2022/10/15 18:11:59 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-void	ft_putendl_fd(char *s, int fd)
+t_list	*ft_lstnew(void *content)
 {
-	if (s != NULL)
-	{
-		ft_putstr_fd(s, fd);
-		ft_putchar_fd('\n', fd);
-	}
+	t_list	*result;
+
+	result = malloc(sizeof(t_list));
+	result->content = content;
+	result->next = NULL;
+	return (result);
 }
+// int main()
+// {
+// 	 t_list *new;
+// 	// new->content = "sff";
+// 	// new->next = NULL;
+// 	printf("%s" , ft_lstnew("jafar")->content);
+// }

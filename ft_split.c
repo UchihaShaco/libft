@@ -6,49 +6,11 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 20:43:29 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/08 14:26:29 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/13 20:05:45 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-//Allocates a storage space of size n+1 in the s 
-//string stores the string and returns it
-char	*ft_strndup(const char *s, size_t n)
-{
-	size_t	i;
-	char	*str;
-
-	i = 0;
-	str = NULL;
-	if (n == 0)
-		return (NULL);
-	str = (char *)malloc(sizeof(char) * (n + 1));
-	if (str == 0)
-		return (NULL);
-	while (i < n)
-	{
-		str[i] = s[i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
-}
-
-//Frees all allocated storage space in  list and frees the list
-char	**ft_freeall(char **list)
-{
-	size_t	j;
-
-	j = 0;
-	while (list[j])
-	{
-		free(list[j]);
-		j++;
-	}
-	free(list);
-	return (NULL);
-}
 
 //A function to find the total amount of storage space required 
 //when the string s is divided based on the letter c.
@@ -78,6 +40,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	k = 0;
+	if (!s)
+		return (NULL);
 	strlist = (char **)malloc(sizeof(char *) * (ft_wordcount(s, c) + 1));
 	if (!strlist)
 		return (NULL);
@@ -88,9 +52,8 @@ char	**ft_split(char const *s, char c)
 		save = k;
 		while (s[k] != c && s[k] != '\0')
 			k++;
-		strlist[i] = ft_strndup(&s[save], k - save);
-		if (strlist[i++] == 0)
-			return (ft_freeall(strlist));
+		strlist[i] = ft_substr(s, save, k - save);
+		i++;
 	}
 	strlist[i] = NULL;
 	return (strlist);
@@ -98,15 +61,15 @@ char	**ft_split(char const *s, char c)
 
 // int main()
 // {
-//     char *str="\0aa\0bbb" ,c=' ';
-//  char str1[]= "Hello world";
+//     char c=' ';
+//  char str1[]= "  tripouille  42  ";
 //     char **ptr = ft_split(str1, c);
-//     printf("Printing a split\n");
-//     printf("%s\n", *ptr);
-// 	 while( str1 != NULL ) {
-//       printf( " %s\n", *ptr ); //printing each token
-//    }
+// 	int i;
+// 	i = 0;
+// 	while (ptr[i] != NULL)
+// 	{
+// 		printf("%s\n", ptr[i]);
+// 		i++;
+// 	}
 //     return (0);
 // }
-#include <stdio.h>
- 

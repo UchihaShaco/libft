@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 23:33:19 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/05 15:41:50 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/13 18:45:22 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,26 +29,22 @@ RETURN VALUES
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	i;
-	int	needle_len;
+	size_t	hay_len;
+	size_t	need_len;
 
-	needle_len = ft_strlen(needle);
-	i = 0;
-	if (needle[0] == '\0')
+	if (*needle == '\0' || len == 0)
 		return ((char *)haystack);
-	if (((needle_len == 0 && needle[i] && haystack[i]) 
-	|| ft_strlen(haystack) == 0 || len == 0))
+	hay_len = ft_strlen(haystack);
+	need_len = ft_strlen(needle);
+	if (hay_len < need_len || len < need_len)
 		return (NULL);
-	if (needle_len == 0 || (ft_strlen(haystack) == 0 && len == 0))
-		return ((char *)haystack);
-	while (i <= (len - needle_len))
+	while (len-- >= need_len && *haystack)
 	{
-		if ((0 == ft_strncmp(haystack, needle, needle_len)))
+		if (ft_memcmp(haystack, needle, need_len) == 0)
 			return ((char *)haystack);
-			i++;
-			haystack++;
+		haystack++;
 	}
-	return (0);
+	return (NULL);
 }
 // int main()
 // {

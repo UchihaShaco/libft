@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 13:36:02 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/07 23:20:48 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/08 15:59:24 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // and copy them into the destination string
 // int main()
 // {
-//     char str1[] = "Welcome to Qatar World Cup 2021";
+//     char str1[] = "Welcome to the Uchihas 2021";
 //     // int start = 5;
 //     char *dest = ft_substr(str1, 5, 10);
 //     printf("My string : %s\n", dest);

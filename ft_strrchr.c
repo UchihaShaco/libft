@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 07:04:57 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/06 19:51:54 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/10 15:31:54 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	while (*s)
-	s++;
-	while (*s >= 0)
+	int	i;
+
+	i = 0;
+	while (s[i])
+	i++;
+	while (i >= 0)
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s--;
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
+		i--;
 	}
 	return (0);
 }

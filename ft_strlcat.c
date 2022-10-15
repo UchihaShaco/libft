@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 07:20:53 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/09/29 22:23:53 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/13 20:01:09 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,31 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	len;
-	size_t	slen;
+	size_t	scount;
+	size_t	dlen;
 
-len = 0;
-slen = ft_strlen(src);
-	while (*dst && dstsize > 0)
+	dlen = ft_strlen(dst);
+	if (dlen >= dstsize)
+		return (ft_strlen(src) + dstsize);
+	scount = 0;
+	while (src[scount] != '\0' && dlen + 1 < dstsize)
 	{
-	dst++;
-	len++;
-	dstsize--;
+	dst[dlen] = src[scount];
+	scount++;
+	dlen++;
 	}
-	while (*src && dstsize-- > 1)
-	*dst++ = *src++;
-	if (dstsize == 1 || *src == 0)
-	*dst = '\0';
-	return (slen + len);
+	dst[dlen] = '\0';
+	return (ft_strlen(&src[scount]) + dlen);
 }
+
+// int main()
+// {
+// 	char src[] = "lorem ipsum dolor sit amet";
+// 	char dest[]= "a";
+
+// 	printf("Dest Before: %s\n", dest);
+// 	printf("Dest after : %zu\n", ft_strlcat(dest, src, 6));
+// 	printf("Dest after : %s\n", dest);
+
+// 	return (0);
+// }
