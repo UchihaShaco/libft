@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 23:33:19 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/13 18:45:22 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/16 16:31:13 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	hay_len;
 	size_t	need_len;
 
-	if (*needle == '\0' || len == 0)
+	if (*needle == '\0' )
 		return ((char *)haystack);
+	if (len == 0)
+		return (NULL);
 	hay_len = ft_strlen(haystack);
 	need_len = ft_strlen(needle);
 	if (hay_len < need_len || len < need_len)
@@ -48,11 +50,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 }
 // int main()
 // {
-//     char *ptr;
-// 	char haystack[30] = "gfh";
-//         char needle[10] = "sdf";
-//     ptr = ft_strnstr(haystack, needle, 0);
-// 	printf("Returning the string: %s \n", ptr);
-// 	printf("Returning the string: %s \n", strnstr(haystack, needle, -1));
+//     // char *ptr;
+// 	// char haystack[30] = "gfh";
+//     //     char needle[10] = "sdf";
+//     // ptr = ft_strnstr("lorem ipsum dolor sit amet", "dolor", 0);
+// 	printf("Returning the string: %s \n", 
+//ft_strnstr("lorem ipsum dolor sit amet", "dolor", 0));
+// 	printf("Returning the string: %s \n", 
+//strnstr("lorem ipsum dolor sit amet", "dolor", 0));
 //     return (0);
 // }

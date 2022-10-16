@@ -1,32 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/15 15:37:39 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/16 16:09:38 by jalwahei         ###   ########.fr       */
+/*   Created: 2022/10/15 20:27:20 by jalwahei          #+#    #+#             */
+/*   Updated: 2022/10/15 20:35:54 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*result;
+	size_t	size;
 
-	result = malloc(sizeof(t_list));
-	if (!result)
-		return (NULL);
-	result->content = content;
-	result->next = NULL;
-	return (result);
+	size = 0;
+	while (lst)
+	{
+		lst = lst->next;
+		size++;
+	}
+	return (size);
 }
-// int main()
+// int main ()
 // {
-// 	 t_list *new;
-// 	// new->content = "sff";
-// 	// new->next = NULL;
-// 	printf("%s" , ft_lstnew("jafar")->content);
+// 	t_list *a;
+// 	t_list *b;
+// 	t_list *c;
+// 	t_list *d;
+// 	a = ft_lstnew("1");
+// 	b = ft_lstnew("2");
+// 	c = ft_lstnew("3");
+// 	d = ft_lstnew("4");
+// 	a->next = b;
+// 	b->next = c;
+// 	c ->next = d;
+// 	d ->next = NULL;
+// 	printf("%d", ft_lstsize(a));
 // }

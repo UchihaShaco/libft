@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 11:22:45 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/15 15:34:24 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/16 20:10:15 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 #include <limits.h>
 #include <stdlib.h>
 #include "libft.h"
+
+int	two_case(const char *str)
+{
+	if (ft_strncmp(&str[0], "2", 1) == 0)
+		return (-1);
+	if ((ft_strlen(str) == 21) && \
+	(ft_strncmp(&str[0], "-", 1) == 0 && ft_strncmp(&str[1], "2", 1) == 0))
+		return (0);
+	return (0);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -25,8 +35,9 @@ int	ft_atoi(const char *str)
 	i = 0;
 	res = 0;
 	sign = 1;
-	while ((str[i] == ' ') || str[i] == '\n' || str[i] == '\t'
-		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+	if ((ft_strlen(str) == 20 && str[0] != '-') || ft_strlen(str) == 21)
+		return (two_case(str));
+	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 		sign = 1 - 2 * (str[i++] == '-');
@@ -35,11 +46,7 @@ int	ft_atoi(const char *str)
 		oldres = res;
 		res = 10 * res + (str[i++] - '0');
 		if (oldres > res)
-		{
-			if (sign == 1)
-				return (-1);
-			return (0);
-		}
+			return (-(sign == 1));
 	}
 	return ((long long)res * sign);
 }

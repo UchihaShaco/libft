@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/15 15:37:39 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/16 16:09:38 by jalwahei         ###   ########.fr       */
+/*   Created: 2022/10/15 20:26:09 by jalwahei          #+#    #+#             */
+/*   Updated: 2022/10/15 20:26:46 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	*result;
-
-	result = malloc(sizeof(t_list));
-	if (!result)
-		return (NULL);
-	result->content = content;
-	result->next = NULL;
-	return (result);
+	if (!lst)
+		return ;
+	new->next = *(lst);
+	*(lst) = new;
 }
-// int main()
-// {
-// 	 t_list *new;
-// 	// new->content = "sff";
-// 	// new->next = NULL;
-// 	printf("%s" , ft_lstnew("jafar")->content);
-// }

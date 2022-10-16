@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 07:20:53 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/13 20:01:09 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/16 21:04:21 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	scount;
 	size_t	dlen;
 
+	if (!dst && !dstsize)
+		return (0);
 	dlen = ft_strlen(dst);
 	if (dlen >= dstsize)
 		return (ft_strlen(src) + dstsize);
@@ -52,10 +54,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 // {
 // 	char src[] = "lorem ipsum dolor sit amet";
 // 	char dest[]= "a";
-
 // 	printf("Dest Before: %s\n", dest);
 // 	printf("Dest after : %zu\n", ft_strlcat(dest, src, 6));
 // 	printf("Dest after : %s\n", dest);
-
 // 	return (0);
 // }
