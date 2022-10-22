@@ -6,14 +6,15 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 20:43:29 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/13 20:05:45 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/22 10:20:09 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//A function to find the total amount of storage space required 
-//when the string s is divided based on the letter c.
+/*A function to find the total amount of storage space required 
+when the string s is divided based on the letter c.
+*/
 size_t	ft_wordcount(char const *s, char c)
 {
 	size_t	listsize;

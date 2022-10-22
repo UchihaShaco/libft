@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 23:33:19 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/16 16:31:13 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/22 12:36:03 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,6 @@ DESCRIPTION
  string needle in the string haystack,
 	where not more than len characters are searched.  Characters that appear
      after a `\0' character are not searched.  
-	 Since the strnstr() function is a FreeBSD specific
-     API, it should only be used when portability is not a concern.
-RETURN VALUES
-     If needle is an empty string,
-	haystack is returned; if needle occurs nowhere in haystack, NULL
-     is returned; otherwise a pointer to the first character of the 
-	 first occurrence of needle is returned.
 */
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)

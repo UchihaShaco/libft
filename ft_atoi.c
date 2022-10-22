@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 11:22:45 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/16 20:10:15 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/22 12:42:46 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 
 int	two_case(const char *str)
 {
-	if (ft_strncmp(&str[0], "2", 1) == 0)
+	if (ft_isdigit(str[0]) == 1)
 		return (-1);
 	if ((ft_strlen(str) == 21) && \
-	(ft_strncmp(&str[0], "-", 1) == 0 && ft_strncmp(&str[1], "2", 1) == 0))
+	((str[0] == '-') && ft_isdigit(str[1] == 0)))
 		return (0);
 	return (0);
 }
@@ -35,7 +35,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	res = 0;
 	sign = 1;
-	if ((ft_strlen(str) == 20 && str[0] != '-') || ft_strlen(str) == 21)
+	if ((ft_strlen(str) == 20 && str[0] != '-' && ft_isdigit(str[0]) == 1 ) || ft_strlen(str) == 21)
 		return (two_case(str));
 	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
 		i++;

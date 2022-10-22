@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 04:22:43 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/10/01 19:42:44 by jalwahei         ###   ########.fr       */
+/*   Updated: 2022/10/22 10:17:42 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include "libft.h"
-// It will look for a character inside the string and returns
-// character from that position of the character
+/* It will look for a character inside the string and returns
+ character from that position of the character
+*/
 void	*ft_memchr(const void *b, int c, size_t n)
 {
 	size_t			i;
@@ -42,7 +43,6 @@ void	*ft_memchr(const void *b, int c, size_t n)
 // int	ft_strlen(char *str)
 // {
 // 	int	l;
-
 // 	l = 0;
 // 	while (*(str++) != '\0')
 // 	{
@@ -50,19 +50,14 @@ void	*ft_memchr(const void *b, int c, size_t n)
 // 	}
 // 	return (l);
 // }
-
 // int main()
 // {
 // const char str[] = "hehehehe.zehehehe";
 //    const char ch = '.';
 //    char *ret;
-
 //    ret = memchr(str, ch, strlen(str));
-
 //    printf("String after |%c| is - |%s|\n", ch, ret);
 //  ret = ft_memchr(str, ch, ft_strlen(str));
-
 //    printf("String after ftmem |%c| is - |%s|\n", ch, ret);
-
 //    return(0);
 // }
